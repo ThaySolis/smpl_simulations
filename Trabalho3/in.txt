@@ -1,0 +1,3 @@
+nodos 8
+tempo 250.0
+fonte 0 100.0

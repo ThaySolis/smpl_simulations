@@ -1,0 +1,157 @@
+=============================================================================
+Inicio da execucao: Best-Effort Broadcast sobre o VCube - Sistemas Distribuídos.
+Thayse Marques Solis
+Data da última modificação: 05 de março de 2021
+Trabalho 3 - Best-Effort Broadcast sobre o VCube
+=============================================================================
+
+O número de processos para a simulação é 16 e o tempo de simulação é 290.0
+Número de clusters é: 4
+
+Simulação iniciada
+
+
+Tempo 45.0: o broadcast iniciou!
+
+Tempo 45.0: processo 0 vai enviar uma mensagem de broadcast:
+	Processo 0 fez o deliver da mensagem
+	Processo 0 enviou a mensagem para 1 (cluster 1).
+	Processo 0 enviou a mensagem para 2 (cluster 2).
+	Processo 0 enviou a mensagem para 4 (cluster 3).
+	Processo 0 enviou a mensagem para 8 (cluster 4).
+	Pending ACK[0]: [ 1 2 4 8 ]
+
+Tempo 75.0: processo 1 recebeu uma mensagem do processo 0 no cluster 1.
+	Processo 1 fez o deliver da mensagem
+	Pending ACK[1]: [ ]
+	Processo 1 enviou o ACK para o processo 0.
+
+Tempo 75.0: processo 2 recebeu uma mensagem do processo 0 no cluster 2.
+	Processo 2 fez o deliver da mensagem
+	Processo 2 enviou a mensagem para 3 (cluster 1).
+	Pending ACK[2]: [ 3 ]
+
+Tempo 75.0: processo 4 recebeu uma mensagem do processo 0 no cluster 3.
+	Processo 4 fez o deliver da mensagem
+	Processo 4 enviou a mensagem para 6 (cluster 2).
+	Processo 4 enviou a mensagem para 5 (cluster 1).
+	Pending ACK[4]: [ 6 5 ]
+
+Tempo 75.0: processo 8 recebeu uma mensagem do processo 0 no cluster 4.
+	Processo 8 fez o deliver da mensagem
+	Processo 8 enviou a mensagem para 12 (cluster 3).
+	Processo 8 enviou a mensagem para 10 (cluster 2).
+	Processo 8 enviou a mensagem para 9 (cluster 1).
+	Pending ACK[8]: [ 12 10 9 ]
+
+Tempo 105.0: processo 0 recebeu ACK de 1
+	Pending ACK[0]: [ 2 4 8 ]
+
+Tempo 105.0: processo 3 recebeu uma mensagem do processo 2 no cluster 1.
+	Processo 3 fez o deliver da mensagem
+	Pending ACK[3]: [ ]
+	Processo 3 enviou o ACK para o processo 2.
+
+Tempo 105.0: processo 6 recebeu uma mensagem do processo 4 no cluster 2.
+	Processo 6 fez o deliver da mensagem
+	Processo 6 enviou a mensagem para 7 (cluster 1).
+	Pending ACK[6]: [ 7 ]
+
+Tempo 105.0: processo 5 recebeu uma mensagem do processo 4 no cluster 1.
+	Processo 5 fez o deliver da mensagem
+	Pending ACK[5]: [ ]
+	Processo 5 enviou o ACK para o processo 4.
+
+Tempo 105.0: processo 12 recebeu uma mensagem do processo 8 no cluster 3.
+	Processo 12 fez o deliver da mensagem
+	Processo 12 enviou a mensagem para 14 (cluster 2).
+	Processo 12 enviou a mensagem para 13 (cluster 1).
+	Pending ACK[12]: [ 14 13 ]
+
+Tempo 105.0: processo 10 recebeu uma mensagem do processo 8 no cluster 2.
+	Processo 10 fez o deliver da mensagem
+	Processo 10 enviou a mensagem para 11 (cluster 1).
+	Pending ACK[10]: [ 11 ]
+
+Tempo 105.0: processo 9 recebeu uma mensagem do processo 8 no cluster 1.
+	Processo 9 fez o deliver da mensagem
+	Pending ACK[9]: [ ]
+	Processo 9 enviou o ACK para o processo 8.
+
+Tempo 135.0: processo 2 recebeu ACK de 3
+	Pending ACK[2]: [ ]
+	Processo 2 enviou o ACK para o processo 0.
+
+Tempo 135.0: processo 7 recebeu uma mensagem do processo 6 no cluster 1.
+	Processo 7 fez o deliver da mensagem
+	Pending ACK[7]: [ ]
+	Processo 7 enviou o ACK para o processo 6.
+
+Tempo 135.0: processo 4 recebeu ACK de 5
+	Pending ACK[4]: [ 6 ]
+
+Tempo 135.0: processo 14 recebeu uma mensagem do processo 12 no cluster 2.
+	Processo 14 fez o deliver da mensagem
+	Processo 14 enviou a mensagem para 15 (cluster 1).
+	Pending ACK[14]: [ 15 ]
+
+Tempo 135.0: processo 13 recebeu uma mensagem do processo 12 no cluster 1.
+	Processo 13 fez o deliver da mensagem
+	Pending ACK[13]: [ ]
+	Processo 13 enviou o ACK para o processo 12.
+
+Tempo 135.0: processo 11 recebeu uma mensagem do processo 10 no cluster 1.
+	Processo 11 fez o deliver da mensagem
+	Pending ACK[11]: [ ]
+	Processo 11 enviou o ACK para o processo 10.
+
+Tempo 135.0: processo 8 recebeu ACK de 9
+	Pending ACK[8]: [ 12 10 ]
+
+Tempo 165.0: processo 0 recebeu ACK de 2
+	Pending ACK[0]: [ 4 8 ]
+
+Tempo 165.0: processo 6 recebeu ACK de 7
+	Pending ACK[6]: [ ]
+	Processo 6 enviou o ACK para o processo 4.
+
+Tempo 165.0: processo 15 recebeu uma mensagem do processo 14 no cluster 1.
+	Processo 15 fez o deliver da mensagem
+	Pending ACK[15]: [ ]
+	Processo 15 enviou o ACK para o processo 14.
+
+Tempo 165.0: processo 12 recebeu ACK de 13
+	Pending ACK[12]: [ 14 ]
+
+Tempo 165.0: processo 10 recebeu ACK de 11
+	Pending ACK[10]: [ ]
+	Processo 10 enviou o ACK para o processo 8.
+
+Tempo 195.0: processo 4 recebeu ACK de 6
+	Pending ACK[4]: [ ]
+	Processo 4 enviou o ACK para o processo 0.
+
+Tempo 195.0: processo 14 recebeu ACK de 15
+	Pending ACK[14]: [ ]
+	Processo 14 enviou o ACK para o processo 12.
+
+Tempo 195.0: processo 8 recebeu ACK de 10
+	Pending ACK[8]: [ 12 ]
+
+Tempo 225.0: processo 0 recebeu ACK de 4
+	Pending ACK[0]: [ 8 ]
+
+Tempo 225.0: processo 12 recebeu ACK de 14
+	Pending ACK[12]: [ ]
+	Processo 12 enviou o ACK para o processo 8.
+
+Tempo 255.0: processo 8 recebeu ACK de 12
+	Pending ACK[8]: [ ]
+	Processo 8 enviou o ACK para o processo 0.
+
+Tempo 285.0: processo 0 recebeu ACK de 8
+	Pending ACK[0]: [ ]
+
+O broadcast terminou!
+
+Simulação finalizada

@@ -1,0 +1,129 @@
+=============================================================================
+Inicio da execucao: Best-Effort Broadcast sobre o VCube - Sistemas Distribuídos.
+Thayse Marques Solis
+Data da última modificação: 05 de março de 2021
+Trabalho 3 - Best-Effort Broadcast sobre o VCube
+=============================================================================
+
+O número de processos para a simulação é 8 e o tempo de simulação é 351.0
+Número de clusters é: 3
+Falha aleatória: será agendada uma falha para o processo 2 no tempo 228.1
+Falha aleatória: será agendada uma falha para o processo 4 no tempo 139.5
+Falha aleatória: será agendada uma falha para o processo 5 no tempo 196.6
+
+Simulação iniciada
+
+
+Tempo 70.0: o broadcast iniciou!
+
+Tempo 70.0: processo 0 vai enviar uma mensagem de broadcast:
+	Processo 0 fez o deliver da mensagem
+	Processo 0 enviou a mensagem para 1 (cluster 1).
+	Processo 0 enviou a mensagem para 2 (cluster 2).
+	Processo 0 enviou a mensagem para 4 (cluster 3).
+	Pending ACK[0]: [ 1 2 4 ]
+
+Tempo 100.0: processo 1 recebeu uma mensagem do processo 0 no cluster 1.
+	Processo 1 fez o deliver da mensagem
+	Pending ACK[1]: [ ]
+	Processo 1 enviou o ACK para o processo 0.
+
+Tempo 100.0: processo 2 recebeu uma mensagem do processo 0 no cluster 2.
+	Processo 2 fez o deliver da mensagem
+	Processo 2 enviou a mensagem para 3 (cluster 1).
+	Pending ACK[2]: [ 3 ]
+
+Tempo 100.0: processo 4 recebeu uma mensagem do processo 0 no cluster 3.
+	Processo 4 fez o deliver da mensagem
+	Processo 4 enviou a mensagem para 6 (cluster 2).
+	Processo 4 enviou a mensagem para 5 (cluster 1).
+	Pending ACK[4]: [ 6 5 ]
+
+Tempo 130.0: processo 0 recebeu ACK de 1
+	Pending ACK[0]: [ 2 4 ]
+
+Tempo 130.0: processo 3 recebeu uma mensagem do processo 2 no cluster 1.
+	Processo 3 fez o deliver da mensagem
+	Pending ACK[3]: [ ]
+	Processo 3 enviou o ACK para o processo 2.
+
+Tempo 130.0: processo 6 recebeu uma mensagem do processo 4 no cluster 2.
+	Processo 6 fez o deliver da mensagem
+	Processo 6 enviou a mensagem para 7 (cluster 1).
+	Pending ACK[6]: [ 7 ]
+
+Tempo 130.0: processo 5 recebeu uma mensagem do processo 4 no cluster 1.
+	Processo 5 fez o deliver da mensagem
+	Pending ACK[5]: [ ]
+	Processo 5 enviou o ACK para o processo 4.
+
+Tempo 139.5: FALHA: o processo 4 falhou
+
+Tempo 140.0: processo 0 percebeu que o processo 4 falhou e estava esperando um ACK dele.
+	Processo 0 removeu 4 da sua lista de ACKs pendentes.
+	Processo 0 enviou a mensagem para 5 (cluster 3).
+	Pending ACK[0]: [ 2 5 ]
+
+Tempo 140.0: processo 6 percebeu que seu remetente (processo 4) falhou.
+	Pending ACK[6]: [ ]
+
+Tempo 160.0: processo 2 recebeu ACK de 3
+	Pending ACK[2]: [ ]
+	Processo 2 enviou o ACK para o processo 0.
+
+Tempo 160.0: processo 7 recebeu uma mensagem do processo 6 no cluster 1.
+	Processo 7 fez o deliver da mensagem
+	Pending ACK[7]: [ ]
+	Processo 7 enviou o ACK para o processo 6.
+
+Tempo 170.0: processo 5 recebeu uma mensagem do processo 0 no cluster 3.
+	Processo 5 enviou a mensagem para 7 (cluster 2).
+	Pending ACK[5]: [ 7 ]
+
+Tempo 190.0: processo 0 recebeu ACK de 2
+	Pending ACK[0]: [ 5 ]
+
+Tempo 190.0: processo 6 recebeu ACK de 7
+	Pending ACK[6]: [ ]
+
+Tempo 196.6: FALHA: o processo 5 falhou
+
+Tempo 200.0: processo 7 recebeu uma mensagem do processo 5 no cluster 2.
+	Processo 7 enviou a mensagem para 6 (cluster 1).
+	Pending ACK[7]: [ 6 ]
+
+Tempo 200.0: processo 7 percebeu que seu remetente (processo 5) falhou.
+	Pending ACK[7]: [ ]
+
+Tempo 210.0: processo 0 percebeu que o processo 5 falhou e estava esperando um ACK dele.
+	Processo 0 removeu 5 da sua lista de ACKs pendentes.
+	Processo 0 enviou a mensagem para 6 (cluster 3).
+	Pending ACK[0]: [ 6 ]
+
+Tempo 228.1: FALHA: o processo 2 falhou
+
+Tempo 230.0: processo 6 recebeu uma mensagem do processo 7 no cluster 1.
+	Pending ACK[6]: [ ]
+	Processo 6 enviou o ACK para o processo 7.
+
+Tempo 240.0: processo 6 recebeu uma mensagem do processo 0 no cluster 3.
+	Processo 6 enviou a mensagem para 7 (cluster 1).
+	Pending ACK[6]: [ 7 ]
+
+Tempo 260.0: processo 7 recebeu ACK de 6
+	Pending ACK[7]: [ ]
+
+Tempo 270.0: processo 7 recebeu uma mensagem do processo 6 no cluster 1.
+	Pending ACK[7]: [ ]
+	Processo 7 enviou o ACK para o processo 6.
+
+Tempo 300.0: processo 6 recebeu ACK de 7
+	Pending ACK[6]: [ ]
+	Processo 6 enviou o ACK para o processo 0.
+
+Tempo 330.0: processo 0 recebeu ACK de 6
+	Pending ACK[0]: [ ]
+
+O broadcast terminou!
+
+Simulação finalizada

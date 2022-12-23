@@ -1,0 +1,474 @@
+=============================================================================
+Inicio da execucao: VCube v.2 - Sistemas Distribuídos.
+Thayse Marques Solis
+Data da última modificação: 29 de janeiro de 2021
+Trabalho 2 - VCube v.2
+=============================================================================
+
+O número de processos para a simulação é 6 e o tempo de simulação é 571.0
+
+Simulação iniciada
+
+Número de clusters é: 3
+
+
+
+
+Tempo 30.0: TESTE: o processo 0 testou 1 que está correto.
+	O vetor State do processo 0 é: [ 0 0 -1 -1 -1 -1 ]
+
+
+Tempo 30.0: TESTE: o processo 1 testou 0 que está correto.
+	O vetor State do processo 1 é: [ 0 0 -1 -1 -1 -1 ]
+
+
+Tempo 30.0: TESTE: o processo 2 testou 3 que está correto.
+	O vetor State do processo 2 é: [ -1 -1 0 0 -1 -1 ]
+
+
+Tempo 30.0: TESTE: o processo 3 testou 2 que está correto.
+	O vetor State do processo 3 é: [ -1 -1 0 0 -1 -1 ]
+
+
+Tempo 30.0: TESTE: o processo 4 testou 5 que está correto.
+	O vetor State do processo 4 é: [ -1 -1 -1 -1 0 0 ]
+
+
+Tempo 30.0: TESTE: o processo 5 testou 4 que está correto.
+	O vetor State do processo 5 é: [ -1 -1 -1 -1 0 0 ]
+
+
+Tempo 31.0: FALHA: o processo 1 falhou
+
+
+Tempo 60.0: TESTE: o processo 0 testou 2 que está correto.
+	O processo 0 aprendeu com o processo 2 que o estado do processo 3 é 0
+	O vetor State do processo 0 é: [ 0 0 0 0 -1 -1 ]
+
+
+Tempo 60.0: TESTE: o processo 2 testou 0 que está correto.
+	O processo 2 aprendeu com o processo 0 que o estado do processo 1 é 0
+	O vetor State do processo 2 é: [ 0 0 0 0 -1 -1 ]
+
+
+Tempo 60.0: TESTE: o processo 3 testou 1 que está falho.
+	O vetor State do processo 3 é: [ -1 1 0 0 -1 -1 ]
+
+
+	O vetor State do processo 4 é: [ -1 -1 -1 -1 0 0 ]
+
+
+	O vetor State do processo 5 é: [ -1 -1 -1 -1 0 0 ]
+
+
+Tempo 90.0: TESTE: o processo 0 testou 4 que está correto.
+	O processo 0 aprendeu com o processo 4 que o estado do processo 5 é 0
+	O vetor State do processo 0 é: [ 0 0 0 0 0 0 ]
+
+
+	O vetor State do processo 2 é: [ 0 0 0 0 -1 -1 ]
+
+
+Tempo 90.0: TESTE: o processo 3 testou 5 que está correto.
+	O processo 3 aprendeu com o processo 5 que o estado do processo 4 é 0
+	O vetor State do processo 3 é: [ -1 1 0 0 0 0 ]
+
+
+Tempo 90.0: TESTE: o processo 4 testou 0 que está correto.
+	O processo 4 aprendeu com o processo 0 que o estado do processo 1 é 0
+	O processo 4 aprendeu com o processo 0 que o estado do processo 2 é 0
+	O processo 4 aprendeu com o processo 0 que o estado do processo 3 é 0
+Tempo 90.0: TESTE: o processo 4 testou 2 que está correto.
+	O vetor State do processo 4 é: [ 0 0 0 0 0 0 ]
+
+
+Tempo 90.0: TESTE: o processo 5 testou 1 que está falho.
+Tempo 90.0: TESTE: o processo 5 testou 3 que está correto.
+	O processo 5 aprendeu com o processo 3 que o estado do processo 2 é 0
+	O vetor State do processo 5 é: [ -1 1 0 0 0 0 ]
+
+
+Tempo 120.0: TESTE: o processo 0 testou 1 que está falho.
+	O vetor State do processo 0 é: [ 0 1 0 0 0 0 ]
+
+
+Tempo 120.0: TESTE: o processo 2 testou 3 que está correto.
+	O processo 2 aprendeu com o processo 3 que o estado do processo 1 é 1
+	O processo 2 aprendeu com o processo 3 que o estado do processo 4 é 0
+	O processo 2 aprendeu com o processo 3 que o estado do processo 5 é 0
+	O vetor State do processo 2 é: [ 0 1 0 0 0 0 ]
+
+
+Tempo 120.0: TESTE: o processo 3 testou 2 que está correto.
+	O processo 3 aprendeu com o processo 2 que o estado do processo 0 é 0
+	O vetor State do processo 3 é: [ 0 1 0 0 0 0 ]
+
+
+Tempo 120.0: TESTE: o processo 4 testou 5 que está correto.
+	O processo 4 aprendeu com o processo 5 que o estado do processo 1 é 1
+	O vetor State do processo 4 é: [ 0 1 0 0 0 0 ]
+
+####################################################################
+ A falha no processo 1 foi detectada por todos os outros processos 
+ após 13 testes ou 3 rodadas (89.0 unidades de tempo), no tempo 120.0
+####################################################################
+
+
+Tempo 120.0: TESTE: o processo 5 testou 4 que está correto.
+	O processo 5 aprendeu com o processo 4 que o estado do processo 0 é 0
+	O vetor State do processo 5 é: [ 0 1 0 0 0 0 ]
+
+
+Tempo 121.0: FALHA: o processo 2 falhou
+
+
+Tempo 150.0: TESTE: o processo 0 testou 2 que está falho.
+Tempo 150.0: TESTE: o processo 0 testou 3 que está correto.
+	O vetor State do processo 0 é: [ 0 1 1 0 0 0 ]
+
+
+Tempo 150.0: TESTE: o processo 3 testou 1 que está falho.
+	O vetor State do processo 3 é: [ 0 1 0 0 0 0 ]
+
+
+	O vetor State do processo 4 é: [ 0 1 0 0 0 0 ]
+
+
+	O vetor State do processo 5 é: [ 0 1 0 0 0 0 ]
+
+
+Tempo 180.0: TESTE: o processo 0 testou 4 que está correto.
+Tempo 180.0: TESTE: o processo 0 testou 5 que está correto.
+	O vetor State do processo 0 é: [ 0 1 1 0 0 0 ]
+
+
+	O vetor State do processo 3 é: [ 0 1 0 0 0 0 ]
+
+
+Tempo 180.0: TESTE: o processo 4 testou 0 que está correto.
+	O processo 4 aprendeu com o processo 0 que o estado do processo 2 é 1
+Tempo 180.0: TESTE: o processo 4 testou 2 que está falho.
+	O vetor State do processo 4 é: [ 0 1 1 0 0 0 ]
+
+
+Tempo 180.0: TESTE: o processo 5 testou 1 que está falho.
+Tempo 180.0: TESTE: o processo 5 testou 3 que está correto.
+	O vetor State do processo 5 é: [ 0 1 0 0 0 0 ]
+
+
+Tempo 210.0: TESTE: o processo 0 testou 1 que está falho.
+	O vetor State do processo 0 é: [ 0 1 1 0 0 0 ]
+
+
+Tempo 210.0: TESTE: o processo 3 testou 2 que está falho.
+	O vetor State do processo 3 é: [ 0 1 1 0 0 0 ]
+
+
+Tempo 210.0: TESTE: o processo 4 testou 5 que está correto.
+	O vetor State do processo 4 é: [ 0 1 1 0 0 0 ]
+
+
+Tempo 210.0: TESTE: o processo 5 testou 4 que está correto.
+	O processo 5 aprendeu com o processo 4 que o estado do processo 2 é 1
+	O vetor State do processo 5 é: [ 0 1 1 0 0 0 ]
+
+####################################################################
+ A falha no processo 2 foi detectada por todos os outros processos 
+ após 13 testes ou 3 rodadas (89.0 unidades de tempo), no tempo 210.0
+####################################################################
+
+
+Tempo 211.0: RECUPERACAO: o processo 2 recuperou
+
+
+Tempo 240.0: TESTE: o processo 0 testou 2 que está correto.
+Tempo 240.0: TESTE: o processo 0 testou 3 que está correto.
+	O vetor State do processo 0 é: [ 0 1 2 0 0 0 ]
+
+
+Tempo 240.0: TESTE: o processo 3 testou 0 que está correto.
+	O processo 3 aprendeu com o processo 0 que o estado do processo 2 é 2
+Tempo 240.0: TESTE: o processo 3 testou 1 que está falho.
+	O vetor State do processo 3 é: [ 0 1 2 0 0 0 ]
+
+
+	O vetor State do processo 4 é: [ 0 1 1 0 0 0 ]
+
+
+	O vetor State do processo 5 é: [ 0 1 1 0 0 0 ]
+
+
+Tempo 241.0: TESTE: o processo 2 testou 3 que está correto.
+	O processo 2 aprendeu com o processo 3 que o estado do processo 0 é 0
+	O processo 2 aprendeu com o processo 3 que o estado do processo 1 é 1
+	O processo 2 aprendeu com o processo 3 que o estado do processo 4 é 0
+	O processo 2 aprendeu com o processo 3 que o estado do processo 5 é 0
+	O vetor State do processo 2 é: [ 0 1 0 0 0 0 ]
+
+
+Tempo 270.0: TESTE: o processo 0 testou 4 que está correto.
+Tempo 270.0: TESTE: o processo 0 testou 5 que está correto.
+	O vetor State do processo 0 é: [ 0 1 2 0 0 0 ]
+
+
+	O vetor State do processo 3 é: [ 0 1 2 0 0 0 ]
+
+
+Tempo 270.0: TESTE: o processo 4 testou 0 que está correto.
+	O processo 4 aprendeu com o processo 0 que o estado do processo 2 é 2
+Tempo 270.0: TESTE: o processo 4 testou 2 que está correto.
+	O vetor State do processo 4 é: [ 0 1 2 0 0 0 ]
+
+
+Tempo 270.0: TESTE: o processo 5 testou 1 que está falho.
+Tempo 270.0: TESTE: o processo 5 testou 3 que está correto.
+	O processo 5 aprendeu com o processo 3 que o estado do processo 2 é 2
+	O vetor State do processo 5 é: [ 0 1 2 0 0 0 ]
+
+#########################################################################
+ A recuperação no processo 2 foi detectada por todos os outros processos 
+ após 11 testes ou 2 rodadas (59.0 unidades de tempo), no tempo 270.0
+#########################################################################
+
+
+Tempo 271.0: FALHA: o processo 4 falhou
+
+
+Tempo 271.0: TESTE: o processo 2 testou 0 que está correto.
+	O vetor State do processo 2 é: [ 0 1 0 0 0 0 ]
+
+
+Tempo 300.0: TESTE: o processo 0 testou 1 que está falho.
+	O vetor State do processo 0 é: [ 0 1 2 0 0 0 ]
+
+
+Tempo 300.0: TESTE: o processo 3 testou 2 que está correto.
+	O vetor State do processo 3 é: [ 0 1 2 0 0 0 ]
+
+
+Tempo 300.0: TESTE: o processo 5 testou 4 que está falho.
+	O vetor State do processo 5 é: [ 0 1 2 0 1 0 ]
+
+
+	O vetor State do processo 2 é: [ 0 1 0 0 0 0 ]
+
+
+Tempo 330.0: TESTE: o processo 0 testou 2 que está correto.
+Tempo 330.0: TESTE: o processo 0 testou 3 que está correto.
+	O vetor State do processo 0 é: [ 0 1 2 0 0 0 ]
+
+
+Tempo 330.0: TESTE: o processo 3 testou 1 que está falho.
+	O vetor State do processo 3 é: [ 0 1 2 0 0 0 ]
+
+
+	O vetor State do processo 5 é: [ 0 1 2 0 1 0 ]
+
+
+Tempo 331.0: TESTE: o processo 2 testou 3 que está correto.
+	O vetor State do processo 2 é: [ 0 1 0 0 0 0 ]
+
+
+Tempo 360.0: TESTE: o processo 0 testou 4 que está falho.
+Tempo 360.0: TESTE: o processo 0 testou 5 que está correto.
+	O vetor State do processo 0 é: [ 0 1 2 0 1 0 ]
+
+
+	O vetor State do processo 3 é: [ 0 1 2 0 0 0 ]
+
+
+Tempo 360.0: TESTE: o processo 5 testou 0 que está correto.
+Tempo 360.0: TESTE: o processo 5 testou 1 que está falho.
+Tempo 360.0: TESTE: o processo 5 testou 2 que está correto.
+Tempo 360.0: TESTE: o processo 5 testou 3 que está correto.
+	O vetor State do processo 5 é: [ 0 1 2 0 1 0 ]
+
+
+Tempo 361.0: TESTE: o processo 2 testou 0 que está correto.
+	O processo 2 aprendeu com o processo 0 que o estado do processo 4 é 1
+	O vetor State do processo 2 é: [ 0 1 0 0 1 0 ]
+
+
+Tempo 390.0: TESTE: o processo 0 testou 1 que está falho.
+	O vetor State do processo 0 é: [ 0 1 2 0 1 0 ]
+
+
+Tempo 390.0: TESTE: o processo 3 testou 2 que está correto.
+	O processo 3 aprendeu com o processo 2 que o estado do processo 4 é 1
+	O vetor State do processo 3 é: [ 0 1 2 0 1 0 ]
+
+####################################################################
+ A falha no processo 4 foi detectada por todos os outros processos 
+ após 17 testes ou 4 rodadas (119.0 unidades de tempo), no tempo 390.0
+####################################################################
+
+
+Tempo 390.0: TESTE: o processo 5 testou 4 que está falho.
+	O vetor State do processo 5 é: [ 0 1 2 0 1 0 ]
+
+
+Tempo 391.0: RECUPERACAO: o processo 4 recuperou
+
+
+	O vetor State do processo 2 é: [ 0 1 0 0 1 0 ]
+
+
+Tempo 420.0: TESTE: o processo 0 testou 2 que está correto.
+Tempo 420.0: TESTE: o processo 0 testou 3 que está correto.
+	O vetor State do processo 0 é: [ 0 1 2 0 1 0 ]
+
+
+Tempo 420.0: TESTE: o processo 3 testou 1 que está falho.
+	O vetor State do processo 3 é: [ 0 1 2 0 1 0 ]
+
+
+	O vetor State do processo 5 é: [ 0 1 2 0 1 0 ]
+
+
+Tempo 421.0: TESTE: o processo 4 testou 5 que está correto.
+	O processo 4 aprendeu com o processo 5 que o estado do processo 0 é 0
+	O processo 4 aprendeu com o processo 5 que o estado do processo 1 é 1
+	O processo 4 aprendeu com o processo 5 que o estado do processo 2 é 2
+	O processo 4 aprendeu com o processo 5 que o estado do processo 3 é 0
+	O vetor State do processo 4 é: [ 0 1 2 0 0 0 ]
+
+
+Tempo 421.0: TESTE: o processo 2 testou 3 que está correto.
+	O vetor State do processo 2 é: [ 0 1 0 0 1 0 ]
+
+
+Tempo 450.0: TESTE: o processo 0 testou 4 que está correto.
+Tempo 450.0: TESTE: o processo 0 testou 5 que está correto.
+	O vetor State do processo 0 é: [ 0 1 2 0 2 0 ]
+
+
+	O vetor State do processo 3 é: [ 0 1 2 0 1 0 ]
+
+
+Tempo 450.0: TESTE: o processo 5 testou 0 que está correto.
+	O processo 5 aprendeu com o processo 0 que o estado do processo 4 é 2
+Tempo 450.0: TESTE: o processo 5 testou 1 que está falho.
+Tempo 450.0: TESTE: o processo 5 testou 3 que está correto.
+	O vetor State do processo 5 é: [ 0 1 2 0 2 0 ]
+
+
+	O vetor State do processo 4 é: [ 0 1 2 0 0 0 ]
+
+
+Tempo 451.0: TESTE: o processo 2 testou 0 que está correto.
+	O processo 2 aprendeu com o processo 0 que o estado do processo 4 é 2
+	O vetor State do processo 2 é: [ 0 1 0 0 2 0 ]
+
+
+Tempo 480.0: TESTE: o processo 0 testou 1 que está falho.
+	O vetor State do processo 0 é: [ 0 1 2 0 2 0 ]
+
+
+Tempo 480.0: TESTE: o processo 3 testou 2 que está correto.
+	O processo 3 aprendeu com o processo 2 que o estado do processo 4 é 2
+	O vetor State do processo 3 é: [ 0 1 2 0 2 0 ]
+
+#########################################################################
+ A recuperação no processo 4 foi detectada por todos os outros processos 
+ após 13 testes ou 3 rodadas (89.0 unidades de tempo), no tempo 480.0
+#########################################################################
+
+
+Tempo 480.0: TESTE: o processo 5 testou 4 que está correto.
+	O vetor State do processo 5 é: [ 0 1 2 0 2 0 ]
+
+
+Tempo 481.0: RECUPERACAO: o processo 1 recuperou
+
+
+Tempo 481.0: TESTE: o processo 4 testou 0 que está correto.
+Tempo 481.0: TESTE: o processo 4 testou 2 que está correto.
+	O vetor State do processo 4 é: [ 0 1 2 0 0 0 ]
+
+
+	O vetor State do processo 2 é: [ 0 1 0 0 2 0 ]
+
+
+Tempo 510.0: TESTE: o processo 0 testou 2 que está correto.
+Tempo 510.0: TESTE: o processo 0 testou 3 que está correto.
+	O vetor State do processo 0 é: [ 0 1 2 0 2 0 ]
+
+
+Tempo 510.0: TESTE: o processo 3 testou 1 que está correto.
+	O vetor State do processo 3 é: [ 0 2 2 0 2 0 ]
+
+
+	O vetor State do processo 5 é: [ 0 1 2 0 2 0 ]
+
+
+Tempo 511.0: TESTE: o processo 1 testou 0 que está correto.
+	O processo 1 aprendeu com o processo 0 que o estado do processo 2 é 2
+	O processo 1 aprendeu com o processo 0 que o estado do processo 3 é 0
+	O processo 1 aprendeu com o processo 0 que o estado do processo 4 é 2
+	O processo 1 aprendeu com o processo 0 que o estado do processo 5 é 0
+	O vetor State do processo 1 é: [ 0 0 2 0 2 0 ]
+
+
+Tempo 511.0: TESTE: o processo 4 testou 5 que está correto.
+	O vetor State do processo 4 é: [ 0 1 2 0 0 0 ]
+
+
+Tempo 511.0: TESTE: o processo 2 testou 3 que está correto.
+	O processo 2 aprendeu com o processo 3 que o estado do processo 1 é 2
+	O vetor State do processo 2 é: [ 0 2 0 0 2 0 ]
+
+
+Tempo 540.0: TESTE: o processo 0 testou 4 que está correto.
+Tempo 540.0: TESTE: o processo 0 testou 5 que está correto.
+	O vetor State do processo 0 é: [ 0 1 2 0 2 0 ]
+
+
+	O vetor State do processo 3 é: [ 0 2 2 0 2 0 ]
+
+
+Tempo 540.0: TESTE: o processo 5 testou 1 que está correto.
+Tempo 540.0: TESTE: o processo 5 testou 3 que está correto.
+	O vetor State do processo 5 é: [ 0 2 2 0 2 0 ]
+
+
+Tempo 541.0: TESTE: o processo 1 testou 3 que está correto.
+	O vetor State do processo 1 é: [ 0 0 2 0 2 0 ]
+
+
+	O vetor State do processo 4 é: [ 0 1 2 0 0 0 ]
+
+
+Tempo 541.0: TESTE: o processo 2 testou 0 que está correto.
+	O vetor State do processo 2 é: [ 0 2 0 0 2 0 ]
+
+
+Tempo 570.0: TESTE: o processo 0 testou 1 que está correto.
+	O vetor State do processo 0 é: [ 0 2 2 0 2 0 ]
+
+
+Tempo 570.0: TESTE: o processo 3 testou 2 que está correto.
+	O vetor State do processo 3 é: [ 0 2 2 0 2 0 ]
+
+
+Tempo 570.0: TESTE: o processo 5 testou 4 que está correto.
+	O vetor State do processo 5 é: [ 0 2 2 0 2 0 ]
+
+
+Tempo 571.0: TESTE: o processo 1 testou 5 que está correto.
+	O vetor State do processo 1 é: [ 0 0 2 0 2 0 ]
+
+
+Tempo 571.0: TESTE: o processo 4 testou 0 que está correto.
+	O processo 4 aprendeu com o processo 0 que o estado do processo 1 é 2
+Tempo 571.0: TESTE: o processo 4 testou 2 que está correto.
+	O vetor State do processo 4 é: [ 0 2 2 0 0 0 ]
+
+#########################################################################
+ A recuperação no processo 1 foi detectada por todos os outros processos 
+ após 20 testes ou 4 rodadas (90.0 unidades de tempo), no tempo 571.0
+#########################################################################
+
+
+	O vetor State do processo 2 é: [ 0 2 0 0 2 0 ]
+
+Simulação finalizada

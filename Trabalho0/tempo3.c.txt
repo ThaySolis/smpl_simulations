@@ -1,0 +1,180 @@
+// Autor: Thayse Marques Solis
+// Data da última modificação: 26 de novembro de 2020
+// Descrição resumida: Primeiro programa de simulação da disciplina Sistemas Distribuídos.
+// Trabalho 0 - Tarefa 3: Cada processo mantém localmente o vetor State[N].
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "smpl.h"
+
+// Vamos definir os EVENTOS
+#define test 1
+#define fault 2
+#define recovery 3
+
+#define correto 0
+#define falho 1
+#define desconhecido -1
+
+// vamos definir o descritor do processo
+
+typedef struct {
+	int id;		// identificador de facility (recurso) do SMPL
+	int* State;
+	// outras variáveis locais dos processos são declaradas aqui!
+} TipoProcesso;
+
+TipoProcesso* processo;
+
+int main(int argc, char* argv[]) {
+	
+	printf("=============================================================================\n"); 
+	printf("Inicio da execucao: Primeiro programa de simulação - Sistemas Distribuídos.\n");
+	printf("Thayse Marques Solis\n");
+	printf("Data da última modificação: 30 de novembro de 2020\n");
+	printf("Trabalho 0 - Tarefa 3\n");
+	printf("=============================================================================\n"); 
+	
+	static int N, // número de processos
+		   token, // indica o processo que está sendo executado
+		   event, r, i;
+	static char fa_name[5];
+	
+	if(argc!=2) {
+		puts("Uso correto: tempo3 <número de processos>");
+		exit(1);
+	}
+	
+	N = atoi(argv[1]);
+	double tempo_simulacao = 150.0;
+	printf("O número de processos para a simulação é %d e o tempo de simulação é %4.1f\n", N, tempo_simulacao);	
+	
+    smpl(0,"Um Exemplo de Simulação"); // Inicia a simulação
+	reset();
+	stream(1); // Uma única thread de simulação
+	printf("Simulação iniciada\n");
+	
+	// inicializar processos
+	
+	processo = (TipoProcesso*) malloc(sizeof(TipoProcesso)*N);
+	
+	for (i=0;i<N;i++) {
+		processo[i].State = (int*) malloc(sizeof(int)*N); //aloca espaço para o estado de cada processo que é guardado no vetor State
+		for (int j=0; j < N; j++)
+		{
+			if (i==j)
+			{
+				processo[i].State[j]=correto; //No vetor de estados, o estado do próprio processo que armazena o vetor é correto 
+			}
+			else{
+				processo[i].State[j]=desconhecido; // inicializa o estado de cada processo como "desconhecido" ou -1
+			}
+		}
+	}
+	
+	for (i=0;i<N;i++) {
+		memset(fa_name, '\0', 5); // for (j=0;j<5;j++) fa_name[j] = '\0';
+		sprintf(fa_name, "%d", i);
+		processo[i].id = facility(fa_name, 1);
+		//printf("Foi criada uma facility para o processo #%d. O nome dela é \"%s\" e o ID é %d.\n", i, fa_name, processo[i].id);
+	}
+	
+	//vamos fazer o escalonamento inicial de eventos
+	
+	// nossos processos vão executar testes em intervalos de testes
+	// o intervalo de teste vai ser de 30 unidades de tempo
+	// a simulação começa no tempo 0 (zero) e vamos escalonar o primeiro teste de todos os processos 
+	//	para o tempo 30.0
+	
+	for (i = 0; i < N;i++) { // para todos os processos, escalona test para daqui a 30.0 unidades de tempo (i é o token)
+		schedule (test, 30.0, i);
+		printf("No tempo %4.1f: AGENDAMENTO: foi agendado um teste para o processo %d no instante 30.0\n", time(), i);
+	}
+	
+	schedule(fault, 31.0, 1); // escalona uma falha no tempo 31 para o processo 1
+	printf("No tempo %4.1f: AGENDAMENTO: foi agendada uma falha para o processo 1 no instante 31.0\n", time());
+	schedule(recovery, 61.0, 1); // escalona uma recuperação no tempo 61 para o processo 1
+	printf("No tempo %4.1f: AGENDAMENTO: foi agendada uma recuperação para o processo 1 no instante 61.0\n", time());
+
+	int processos_com_falha	= 0; // contador de processos falhos
+
+	//agora vem o loop principal do simulador
+	
+	while(time()<=tempo_simulacao) {
+		cause(&event, &token);
+		//o tempo só avança de verdade quando a funcao cause é chamada, entao é necessario verificar se realmente o evento deve ser executado ou se a simulacao deve ser interrompida
+		if(time()>tempo_simulacao) {
+			printf("Simulação finalizada\n");
+			break;
+		}
+		int num_processo_atual = token;
+		int num_proximo_processo = (token+1)%N;
+		switch(event) {
+			case test:
+				// Se o processo atual estiver falho, ele não vai testar o processo seguinte
+				if (status(processo[num_processo_atual].id) != 0) { 
+					printf("No tempo %4.1f: TESTE: o processo %d está falho e portanto, não faz nada\n", time(), token);
+					break; 
+				}
+				// Agora o processo atual vai testar os processos seguintes até encontrar um correto.
+				while (status(processo[num_proximo_processo].id) != 0) {
+					printf("No tempo %4.1f: TESTE: o processo %d testou o processo %d que está falho.\n", time(), num_processo_atual, num_proximo_processo);
+					processo[num_processo_atual].State[num_proximo_processo] = falho;
+					num_proximo_processo = (num_proximo_processo+1)%N;
+				}
+				if (num_proximo_processo==num_processo_atual) {
+					printf("No tempo %4.1f: TESTE: o único processo correto é o %d\n", time(), token);
+				}
+				else {
+					printf("No tempo %4.1f: TESTE: o processo %d testou o processo %d que está correto.\n", time(), num_processo_atual, num_proximo_processo);
+					processo[num_processo_atual].State[num_proximo_processo] = correto;
+				}
+ 				
+				// Agora vamos agendar o próximo teste
+				schedule(test, 30.0, token);
+				printf("No tempo %4.1f: AGENDAMENTO: foi agendado um teste para o processo %d no tempo %4.1f\n", time(), token, time()+30);
+				
+				//Mostra o vetor de estados (State) do processo atual
+				printf("\tO vetor State do processo %d é: [", num_processo_atual);
+				for (i = 0; i < N; i++)
+				{
+					printf(" %d", processo[num_processo_atual].State[i]);
+				}
+				printf(" ]\n");
+				break;
+			case fault:
+				r = request(processo[token].id, token, 0); // request reserva a facility e faz status != 0
+				if(r!=0) {
+					puts("ERRO:Não foi possível falhar o processo.");
+					exit(1);
+				}
+				printf("No tempo %4.1f: FALHA: o processo %d falhou\n", time(), token);
+				for (i=0; i < N; i++) // Como a falha é crash, zera o vetor de estados do processo que falhou
+				{
+					if (token==i)
+					{
+						processo[token].State[i]=correto; //No vetor de estados, o estado do próprio processo que armazena o vetor é correto 
+					}
+					else{
+						processo[token].State[i]=desconhecido; // inicializa o estado de cada processo como "desconhecido" ou -1
+					}
+				}
+				processos_com_falha++;
+				if (processos_com_falha == N)
+				{
+					printf("No tempo %4.1f:####TODOS OS PROCESSOS ESTÃO FALHOS####\n", time());
+				}
+				
+				break;
+			case recovery:
+				release(processo[token].id, token);
+				printf("No tempo %4.1f: RECUPERACAO: o processo %d recuperou\n", time(), token);
+				schedule(test, 30.0, token);
+				printf("No tempo %4.1f: AGENDAMENTO: foi agendado um teste para o processo %d no tempo %4.1f\n", time(), token, time()+30);
+				processos_com_falha--;
+				break;
+		} // switch
+	} // while
+	return 0;
+}
+

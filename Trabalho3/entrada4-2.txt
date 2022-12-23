@@ -1,0 +1,6 @@
+nodos 8
+tempo 230.0
+fonte 0 70.0
+falha 2 10.0
+falha 4 30.0
+falha 5 90.0

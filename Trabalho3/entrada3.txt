@@ -1,0 +1,3 @@
+nodos 32
+tempo 360.0
+fonte 0 55.0

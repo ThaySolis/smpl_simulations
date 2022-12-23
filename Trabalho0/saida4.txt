@@ -1,0 +1,100 @@
+=============================================================================
+Inicio da execucao: Primeiro programa de simulação - Sistemas Distribuídos.
+Thayse Marques Solis
+Data da última modificação: 30 de novembro de 2020
+Trabalho 0 - Tarefa 4
+=============================================================================
+O número de processos para a simulação é 4 e o tempo de simulação é 150.0
+Simulação iniciada
+No tempo  0.0: AGENDAMENTO: foi agendado um teste para o processo 0 no instante 30.0
+No tempo  0.0: AGENDAMENTO: foi agendado um teste para o processo 1 no instante 30.0
+No tempo  0.0: AGENDAMENTO: foi agendado um teste para o processo 2 no instante 30.0
+No tempo  0.0: AGENDAMENTO: foi agendado um teste para o processo 3 no instante 30.0
+No tempo  0.0: AGENDAMENTO: foi agendada uma falha para o processo 1 no instante 31.0
+No tempo  0.0: AGENDAMENTO: foi agendada uma recuperação para o processo 1 no instante 61.0
+No tempo 30.0: TESTE: o processo 0 testou o processo 1 que está correto.
+No tempo 30.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 60.0
+	O vetor State do processo 0 é: [ 0 0 -1 -1 ]
+No tempo 30.0: TESTE: o processo 1 testou o processo 2 que está correto.
+No tempo 30.0: AGENDAMENTO: foi agendado um teste para o processo 1 no tempo 60.0
+	O vetor State do processo 1 é: [ -1 0 0 -1 ]
+No tempo 30.0: TESTE: o processo 2 testou o processo 3 que está correto.
+No tempo 30.0: AGENDAMENTO: foi agendado um teste para o processo 2 no tempo 60.0
+	O vetor State do processo 2 é: [ -1 -1 0 0 ]
+No tempo 30.0: TESTE: o processo 3 testou o processo 0 que está correto.
+	O processo 3 aprendeu com o processo 0 que o estado do processo 1 é 0
+No tempo 30.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 60.0
+	O vetor State do processo 3 é: [ 0 0 -1 0 ]
+No tempo 31.0: FALHA: o processo 1 falhou
+No tempo 60.0: TESTE: o processo 0 testou o processo 1 que está falho.
+No tempo 60.0: TESTE: o processo 0 testou o processo 2 que está correto.
+	O processo 0 aprendeu com o processo 2 que o estado do processo 3 é 0
+No tempo 60.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 90.0
+	O vetor State do processo 0 é: [ 0 1 0 0 ]
+No tempo 60.0: TESTE: o processo 1 está falho e portanto, não faz nada
+No tempo 60.0: TESTE: o processo 2 testou o processo 3 que está correto.
+	O processo 2 aprendeu com o processo 3 que o estado do processo 0 é 0
+	O processo 2 aprendeu com o processo 3 que o estado do processo 1 é 0
+No tempo 60.0: AGENDAMENTO: foi agendado um teste para o processo 2 no tempo 90.0
+	O vetor State do processo 2 é: [ 0 0 0 0 ]
+No tempo 60.0: TESTE: o processo 3 testou o processo 0 que está correto.
+	O processo 3 aprendeu com o processo 0 que o estado do processo 1 é 1
+	O processo 3 aprendeu com o processo 0 que o estado do processo 2 é 0
+No tempo 60.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 90.0
+	O vetor State do processo 3 é: [ 0 1 0 0 ]
+No tempo 61.0: RECUPERACAO: o processo 1 recuperou
+No tempo 61.0: AGENDAMENTO: foi agendado um teste para o processo 1 no tempo 91.0
+No tempo 90.0: TESTE: o processo 0 testou o processo 1 que está correto.
+No tempo 90.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 120.0
+	O vetor State do processo 0 é: [ 0 0 0 0 ]
+No tempo 90.0: TESTE: o processo 2 testou o processo 3 que está correto.
+	O processo 2 aprendeu com o processo 3 que o estado do processo 0 é 0
+	O processo 2 aprendeu com o processo 3 que o estado do processo 1 é 1
+No tempo 90.0: AGENDAMENTO: foi agendado um teste para o processo 2 no tempo 120.0
+	O vetor State do processo 2 é: [ 0 1 0 0 ]
+No tempo 90.0: TESTE: o processo 3 testou o processo 0 que está correto.
+	O processo 3 aprendeu com o processo 0 que o estado do processo 1 é 0
+	O processo 3 aprendeu com o processo 0 que o estado do processo 2 é 0
+No tempo 90.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 120.0
+	O vetor State do processo 3 é: [ 0 0 0 0 ]
+No tempo 91.0: TESTE: o processo 1 testou o processo 2 que está correto.
+	O processo 1 aprendeu com o processo 2 que o estado do processo 3 é 0
+	O processo 1 aprendeu com o processo 2 que o estado do processo 0 é 0
+No tempo 91.0: AGENDAMENTO: foi agendado um teste para o processo 1 no tempo 121.0
+	O vetor State do processo 1 é: [ 0 0 0 0 ]
+No tempo 120.0: TESTE: o processo 0 testou o processo 1 que está correto.
+	O processo 0 aprendeu com o processo 1 que o estado do processo 2 é 0
+	O processo 0 aprendeu com o processo 1 que o estado do processo 3 é 0
+No tempo 120.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 150.0
+	O vetor State do processo 0 é: [ 0 0 0 0 ]
+No tempo 120.0: TESTE: o processo 2 testou o processo 3 que está correto.
+	O processo 2 aprendeu com o processo 3 que o estado do processo 0 é 0
+	O processo 2 aprendeu com o processo 3 que o estado do processo 1 é 0
+No tempo 120.0: AGENDAMENTO: foi agendado um teste para o processo 2 no tempo 150.0
+	O vetor State do processo 2 é: [ 0 0 0 0 ]
+No tempo 120.0: TESTE: o processo 3 testou o processo 0 que está correto.
+	O processo 3 aprendeu com o processo 0 que o estado do processo 1 é 0
+	O processo 3 aprendeu com o processo 0 que o estado do processo 2 é 0
+No tempo 120.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 150.0
+	O vetor State do processo 3 é: [ 0 0 0 0 ]
+No tempo 121.0: TESTE: o processo 1 testou o processo 2 que está correto.
+	O processo 1 aprendeu com o processo 2 que o estado do processo 3 é 0
+	O processo 1 aprendeu com o processo 2 que o estado do processo 0 é 0
+No tempo 121.0: AGENDAMENTO: foi agendado um teste para o processo 1 no tempo 151.0
+	O vetor State do processo 1 é: [ 0 0 0 0 ]
+No tempo 150.0: TESTE: o processo 0 testou o processo 1 que está correto.
+	O processo 0 aprendeu com o processo 1 que o estado do processo 2 é 0
+	O processo 0 aprendeu com o processo 1 que o estado do processo 3 é 0
+No tempo 150.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 180.0
+	O vetor State do processo 0 é: [ 0 0 0 0 ]
+No tempo 150.0: TESTE: o processo 2 testou o processo 3 que está correto.
+	O processo 2 aprendeu com o processo 3 que o estado do processo 0 é 0
+	O processo 2 aprendeu com o processo 3 que o estado do processo 1 é 0
+No tempo 150.0: AGENDAMENTO: foi agendado um teste para o processo 2 no tempo 180.0
+	O vetor State do processo 2 é: [ 0 0 0 0 ]
+No tempo 150.0: TESTE: o processo 3 testou o processo 0 que está correto.
+	O processo 3 aprendeu com o processo 0 que o estado do processo 1 é 0
+	O processo 3 aprendeu com o processo 0 que o estado do processo 2 é 0
+No tempo 150.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 180.0
+	O vetor State do processo 3 é: [ 0 0 0 0 ]
+Simulação finalizada

@@ -1,0 +1,570 @@
+=============================================================================
+Inicio da execucao: VRing - Sistemas Distribuídos.
+Thayse Marques Solis
+Data da última modificação: 09 de dezembro de 2020
+Trabalho 1 - VRing
+=============================================================================
+
+O número de processos para a simulação é 6 e o tempo de simulação é 511.0
+
+Simulação iniciada
+
+No tempo  0.0: AGENDAMENTO: foi agendado um teste para o processo 0 no instante 30.0
+No tempo  0.0: AGENDAMENTO: foi agendado um teste para o processo 1 no instante 30.0
+No tempo  0.0: AGENDAMENTO: foi agendado um teste para o processo 2 no instante 30.0
+No tempo  0.0: AGENDAMENTO: foi agendado um teste para o processo 3 no instante 30.0
+No tempo  0.0: AGENDAMENTO: foi agendado um teste para o processo 4 no instante 30.0
+No tempo  0.0: AGENDAMENTO: foi agendado um teste para o processo 5 no instante 30.0
+No tempo  0.0: AGENDAMENTO: foi agendada uma falha para o processo 1 no instante 31.0
+No tempo  0.0: AGENDAMENTO: foi agendada uma falha para o processo 2 no instante 151.0
+No tempo  0.0: AGENDAMENTO: foi agendada uma recuperação para o processo 2 no instante 241.0
+No tempo  0.0: AGENDAMENTO: foi agendada uma falha para o processo 4 no instante 331.0
+No tempo  0.0: AGENDAMENTO: foi agendada uma recuperação para o processo 4 no instante 391.0
+No tempo  0.0: AGENDAMENTO: foi agendada uma recuperação para o processo 1 no instante 451.0
+
+
+No tempo 30.0: TESTE: o processo 0 testou o processo 1 que está correto.
+No tempo 30.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 60.0
+	O vetor State do processo 0 é: [ 0 0 -1 -1 -1 -1 ]
+
+
+No tempo 30.0: TESTE: o processo 1 testou o processo 2 que está correto.
+No tempo 30.0: AGENDAMENTO: foi agendado um teste para o processo 1 no tempo 60.0
+	O vetor State do processo 1 é: [ -1 0 0 -1 -1 -1 ]
+
+
+No tempo 30.0: TESTE: o processo 2 testou o processo 3 que está correto.
+No tempo 30.0: AGENDAMENTO: foi agendado um teste para o processo 2 no tempo 60.0
+	O vetor State do processo 2 é: [ -1 -1 0 0 -1 -1 ]
+
+
+No tempo 30.0: TESTE: o processo 3 testou o processo 4 que está correto.
+No tempo 30.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 60.0
+	O vetor State do processo 3 é: [ -1 -1 -1 0 0 -1 ]
+
+
+No tempo 30.0: TESTE: o processo 4 testou o processo 5 que está correto.
+No tempo 30.0: AGENDAMENTO: foi agendado um teste para o processo 4 no tempo 60.0
+	O vetor State do processo 4 é: [ -1 -1 -1 -1 0 0 ]
+
+
+No tempo 30.0: TESTE: o processo 5 testou o processo 0 que está correto.
+	O processo 5 aprendeu com o processo 0 que o estado do processo 1 é 0
+No tempo 30.0: AGENDAMENTO: foi agendado um teste para o processo 5 no tempo 60.0
+	O vetor State do processo 5 é: [ 0 0 -1 -1 -1 0 ]
+
+
+No tempo 31.0: FALHA: o processo 1 falhou
+
+
+No tempo 60.0: TESTE: o processo 0 testou o processo 1 que está falho.
+No tempo 60.0: TESTE: o processo 0 testou o processo 2 que está correto.
+	O processo 0 aprendeu com o processo 2 que o estado do processo 3 é 0
+No tempo 60.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 90.0
+	O vetor State do processo 0 é: [ 0 1 0 0 -1 -1 ]
+
+
+No tempo 60.0: TESTE: o processo 1 está falho e portanto, não faz nada
+
+
+No tempo 60.0: TESTE: o processo 2 testou o processo 3 que está correto.
+	O processo 2 aprendeu com o processo 3 que o estado do processo 4 é 0
+No tempo 60.0: AGENDAMENTO: foi agendado um teste para o processo 2 no tempo 90.0
+	O vetor State do processo 2 é: [ -1 -1 0 0 0 -1 ]
+
+
+No tempo 60.0: TESTE: o processo 3 testou o processo 4 que está correto.
+	O processo 3 aprendeu com o processo 4 que o estado do processo 5 é 0
+No tempo 60.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 90.0
+	O vetor State do processo 3 é: [ -1 -1 -1 0 0 0 ]
+
+
+No tempo 60.0: TESTE: o processo 4 testou o processo 5 que está correto.
+	O processo 4 aprendeu com o processo 5 que o estado do processo 0 é 0
+	O processo 4 aprendeu com o processo 5 que o estado do processo 1 é 0
+No tempo 60.0: AGENDAMENTO: foi agendado um teste para o processo 4 no tempo 90.0
+	O vetor State do processo 4 é: [ 0 0 -1 -1 0 0 ]
+
+
+No tempo 60.0: TESTE: o processo 5 testou o processo 0 que está correto.
+	O processo 5 aprendeu com o processo 0 que o estado do processo 1 é 1
+	O processo 5 aprendeu com o processo 0 que o estado do processo 2 é 0
+	O processo 5 aprendeu com o processo 0 que o estado do processo 3 é 0
+No tempo 60.0: AGENDAMENTO: foi agendado um teste para o processo 5 no tempo 90.0
+	O vetor State do processo 5 é: [ 0 1 0 0 -1 0 ]
+
+
+No tempo 90.0: TESTE: o processo 0 testou o processo 1 que está falho.
+No tempo 90.0: TESTE: o processo 0 testou o processo 2 que está correto.
+	O processo 0 aprendeu com o processo 2 que o estado do processo 4 é 0
+No tempo 90.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 120.0
+	O vetor State do processo 0 é: [ 0 1 0 0 0 -1 ]
+
+
+No tempo 90.0: TESTE: o processo 2 testou o processo 3 que está correto.
+	O processo 2 aprendeu com o processo 3 que o estado do processo 5 é 0
+No tempo 90.0: AGENDAMENTO: foi agendado um teste para o processo 2 no tempo 120.0
+	O vetor State do processo 2 é: [ -1 -1 0 0 0 0 ]
+
+
+No tempo 90.0: TESTE: o processo 3 testou o processo 4 que está correto.
+	O processo 3 aprendeu com o processo 4 que o estado do processo 0 é 0
+	O processo 3 aprendeu com o processo 4 que o estado do processo 1 é 0
+No tempo 90.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 120.0
+	O vetor State do processo 3 é: [ 0 0 -1 0 0 0 ]
+
+
+No tempo 90.0: TESTE: o processo 4 testou o processo 5 que está correto.
+	O processo 4 aprendeu com o processo 5 que o estado do processo 1 é 1
+	O processo 4 aprendeu com o processo 5 que o estado do processo 2 é 0
+	O processo 4 aprendeu com o processo 5 que o estado do processo 3 é 0
+No tempo 90.0: AGENDAMENTO: foi agendado um teste para o processo 4 no tempo 120.0
+	O vetor State do processo 4 é: [ 0 1 0 0 0 0 ]
+
+
+No tempo 90.0: TESTE: o processo 5 testou o processo 0 que está correto.
+	O processo 5 aprendeu com o processo 0 que o estado do processo 4 é 0
+No tempo 90.0: AGENDAMENTO: foi agendado um teste para o processo 5 no tempo 120.0
+	O vetor State do processo 5 é: [ 0 1 0 0 0 0 ]
+
+
+No tempo 120.0: TESTE: o processo 0 testou o processo 1 que está falho.
+No tempo 120.0: TESTE: o processo 0 testou o processo 2 que está correto.
+	O processo 0 aprendeu com o processo 2 que o estado do processo 5 é 0
+No tempo 120.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 150.0
+	O vetor State do processo 0 é: [ 0 1 0 0 0 0 ]
+
+
+No tempo 120.0: TESTE: o processo 2 testou o processo 3 que está correto.
+	O processo 2 aprendeu com o processo 3 que o estado do processo 0 é 0
+	O processo 2 aprendeu com o processo 3 que o estado do processo 1 é 0
+No tempo 120.0: AGENDAMENTO: foi agendado um teste para o processo 2 no tempo 150.0
+	O vetor State do processo 2 é: [ 0 0 0 0 0 0 ]
+
+
+No tempo 120.0: TESTE: o processo 3 testou o processo 4 que está correto.
+	O processo 3 aprendeu com o processo 4 que o estado do processo 1 é 1
+	O processo 3 aprendeu com o processo 4 que o estado do processo 2 é 0
+No tempo 120.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 150.0
+	O vetor State do processo 3 é: [ 0 1 0 0 0 0 ]
+
+
+No tempo 120.0: TESTE: o processo 4 testou o processo 5 que está correto.
+No tempo 120.0: AGENDAMENTO: foi agendado um teste para o processo 4 no tempo 150.0
+	O vetor State do processo 4 é: [ 0 1 0 0 0 0 ]
+
+
+No tempo 120.0: TESTE: o processo 5 testou o processo 0 que está correto.
+No tempo 120.0: AGENDAMENTO: foi agendado um teste para o processo 5 no tempo 150.0
+	O vetor State do processo 5 é: [ 0 1 0 0 0 0 ]
+
+
+No tempo 150.0: TESTE: o processo 0 testou o processo 1 que está falho.
+No tempo 150.0: TESTE: o processo 0 testou o processo 2 que está correto.
+No tempo 150.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 180.0
+	O vetor State do processo 0 é: [ 0 1 0 0 0 0 ]
+
+
+No tempo 150.0: TESTE: o processo 2 testou o processo 3 que está correto.
+	O processo 2 aprendeu com o processo 3 que o estado do processo 1 é 1
+No tempo 150.0: AGENDAMENTO: foi agendado um teste para o processo 2 no tempo 180.0
+	O vetor State do processo 2 é: [ 0 1 0 0 0 0 ]
+
+####################################################################
+ A falha no processo 1 foi detectada por todos os outros processos 
+ após 21 testes ou 4 rodadas (119.0 unidades de tempo), no tempo 150.0
+####################################################################
+
+
+No tempo 150.0: TESTE: o processo 3 testou o processo 4 que está correto.
+No tempo 150.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 180.0
+	O vetor State do processo 3 é: [ 0 1 0 0 0 0 ]
+
+
+No tempo 150.0: TESTE: o processo 4 testou o processo 5 que está correto.
+No tempo 150.0: AGENDAMENTO: foi agendado um teste para o processo 4 no tempo 180.0
+	O vetor State do processo 4 é: [ 0 1 0 0 0 0 ]
+
+
+No tempo 150.0: TESTE: o processo 5 testou o processo 0 que está correto.
+No tempo 150.0: AGENDAMENTO: foi agendado um teste para o processo 5 no tempo 180.0
+	O vetor State do processo 5 é: [ 0 1 0 0 0 0 ]
+
+
+No tempo 151.0: FALHA: o processo 2 falhou
+
+
+No tempo 180.0: TESTE: o processo 0 testou o processo 1 que está falho.
+No tempo 180.0: TESTE: o processo 0 testou o processo 2 que está falho.
+No tempo 180.0: TESTE: o processo 0 testou o processo 3 que está correto.
+No tempo 180.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 210.0
+	O vetor State do processo 0 é: [ 0 1 1 0 0 0 ]
+
+
+No tempo 180.0: TESTE: o processo 2 está falho e portanto, não faz nada
+
+
+No tempo 180.0: TESTE: o processo 3 testou o processo 4 que está correto.
+No tempo 180.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 210.0
+	O vetor State do processo 3 é: [ 0 1 0 0 0 0 ]
+
+
+No tempo 180.0: TESTE: o processo 4 testou o processo 5 que está correto.
+No tempo 180.0: AGENDAMENTO: foi agendado um teste para o processo 4 no tempo 210.0
+	O vetor State do processo 4 é: [ 0 1 0 0 0 0 ]
+
+
+No tempo 180.0: TESTE: o processo 5 testou o processo 0 que está correto.
+	O processo 5 aprendeu com o processo 0 que o estado do processo 2 é 1
+No tempo 180.0: AGENDAMENTO: foi agendado um teste para o processo 5 no tempo 210.0
+	O vetor State do processo 5 é: [ 0 1 1 0 0 0 ]
+
+
+No tempo 210.0: TESTE: o processo 0 testou o processo 1 que está falho.
+No tempo 210.0: TESTE: o processo 0 testou o processo 2 que está falho.
+No tempo 210.0: TESTE: o processo 0 testou o processo 3 que está correto.
+No tempo 210.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 240.0
+	O vetor State do processo 0 é: [ 0 1 1 0 0 0 ]
+
+
+No tempo 210.0: TESTE: o processo 3 testou o processo 4 que está correto.
+No tempo 210.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 240.0
+	O vetor State do processo 3 é: [ 0 1 0 0 0 0 ]
+
+
+No tempo 210.0: TESTE: o processo 4 testou o processo 5 que está correto.
+	O processo 4 aprendeu com o processo 5 que o estado do processo 2 é 1
+No tempo 210.0: AGENDAMENTO: foi agendado um teste para o processo 4 no tempo 240.0
+	O vetor State do processo 4 é: [ 0 1 1 0 0 0 ]
+
+
+No tempo 210.0: TESTE: o processo 5 testou o processo 0 que está correto.
+No tempo 210.0: AGENDAMENTO: foi agendado um teste para o processo 5 no tempo 240.0
+	O vetor State do processo 5 é: [ 0 1 1 0 0 0 ]
+
+
+No tempo 240.0: TESTE: o processo 0 testou o processo 1 que está falho.
+No tempo 240.0: TESTE: o processo 0 testou o processo 2 que está falho.
+No tempo 240.0: TESTE: o processo 0 testou o processo 3 que está correto.
+No tempo 240.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 270.0
+	O vetor State do processo 0 é: [ 0 1 1 0 0 0 ]
+
+
+No tempo 240.0: TESTE: o processo 3 testou o processo 4 que está correto.
+	O processo 3 aprendeu com o processo 4 que o estado do processo 2 é 1
+No tempo 240.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 270.0
+	O vetor State do processo 3 é: [ 0 1 1 0 0 0 ]
+
+####################################################################
+ A falha no processo 2 foi detectada por todos os outros processos 
+ após 16 testes ou 3 rodadas (89.0 unidades de tempo), no tempo 240.0
+####################################################################
+
+
+No tempo 240.0: TESTE: o processo 4 testou o processo 5 que está correto.
+No tempo 240.0: AGENDAMENTO: foi agendado um teste para o processo 4 no tempo 270.0
+	O vetor State do processo 4 é: [ 0 1 1 0 0 0 ]
+
+
+No tempo 240.0: TESTE: o processo 5 testou o processo 0 que está correto.
+No tempo 240.0: AGENDAMENTO: foi agendado um teste para o processo 5 no tempo 270.0
+	O vetor State do processo 5 é: [ 0 1 1 0 0 0 ]
+
+
+No tempo 241.0: RECUPERACAO: o processo 2 recuperou
+No tempo 241.0: AGENDAMENTO: foi agendado um teste para o processo 2 no tempo 271.0
+
+
+No tempo 270.0: TESTE: o processo 0 testou o processo 1 que está falho.
+No tempo 270.0: TESTE: o processo 0 testou o processo 2 que está correto.
+No tempo 270.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 300.0
+	O vetor State do processo 0 é: [ 0 1 2 0 0 0 ]
+
+
+No tempo 270.0: TESTE: o processo 3 testou o processo 4 que está correto.
+No tempo 270.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 300.0
+	O vetor State do processo 3 é: [ 0 1 1 0 0 0 ]
+
+
+No tempo 270.0: TESTE: o processo 4 testou o processo 5 que está correto.
+No tempo 270.0: AGENDAMENTO: foi agendado um teste para o processo 4 no tempo 300.0
+	O vetor State do processo 4 é: [ 0 1 1 0 0 0 ]
+
+
+No tempo 270.0: TESTE: o processo 5 testou o processo 0 que está correto.
+	O processo 5 aprendeu com o processo 0 que o estado do processo 2 é 2
+No tempo 270.0: AGENDAMENTO: foi agendado um teste para o processo 5 no tempo 300.0
+	O vetor State do processo 5 é: [ 0 1 2 0 0 0 ]
+
+
+No tempo 271.0: TESTE: o processo 2 testou o processo 3 que está correto.
+	O processo 2 aprendeu com o processo 3 que o estado do processo 4 é 0
+	O processo 2 aprendeu com o processo 3 que o estado do processo 5 é 0
+	O processo 2 aprendeu com o processo 3 que o estado do processo 0 é 0
+	O processo 2 aprendeu com o processo 3 que o estado do processo 1 é 1
+No tempo 271.0: AGENDAMENTO: foi agendado um teste para o processo 2 no tempo 301.0
+	O vetor State do processo 2 é: [ 0 1 0 0 0 0 ]
+
+
+No tempo 300.0: TESTE: o processo 0 testou o processo 1 que está falho.
+No tempo 300.0: TESTE: o processo 0 testou o processo 2 que está correto.
+No tempo 300.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 330.0
+	O vetor State do processo 0 é: [ 0 1 2 0 0 0 ]
+
+
+No tempo 300.0: TESTE: o processo 3 testou o processo 4 que está correto.
+No tempo 300.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 330.0
+	O vetor State do processo 3 é: [ 0 1 1 0 0 0 ]
+
+
+No tempo 300.0: TESTE: o processo 4 testou o processo 5 que está correto.
+	O processo 4 aprendeu com o processo 5 que o estado do processo 2 é 2
+No tempo 300.0: AGENDAMENTO: foi agendado um teste para o processo 4 no tempo 330.0
+	O vetor State do processo 4 é: [ 0 1 2 0 0 0 ]
+
+
+No tempo 300.0: TESTE: o processo 5 testou o processo 0 que está correto.
+No tempo 300.0: AGENDAMENTO: foi agendado um teste para o processo 5 no tempo 330.0
+	O vetor State do processo 5 é: [ 0 1 2 0 0 0 ]
+
+
+No tempo 301.0: TESTE: o processo 2 testou o processo 3 que está correto.
+No tempo 301.0: AGENDAMENTO: foi agendado um teste para o processo 2 no tempo 331.0
+	O vetor State do processo 2 é: [ 0 1 0 0 0 0 ]
+
+
+No tempo 330.0: TESTE: o processo 0 testou o processo 1 que está falho.
+No tempo 330.0: TESTE: o processo 0 testou o processo 2 que está correto.
+No tempo 330.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 360.0
+	O vetor State do processo 0 é: [ 0 1 2 0 0 0 ]
+
+
+No tempo 330.0: TESTE: o processo 3 testou o processo 4 que está correto.
+	O processo 3 aprendeu com o processo 4 que o estado do processo 2 é 2
+No tempo 330.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 360.0
+	O vetor State do processo 3 é: [ 0 1 2 0 0 0 ]
+
+#########################################################################
+ A recuperação no processo 2 foi detectada por todos os outros processos 
+ após 15 testes ou 3 rodadas (89.0 unidades de tempo), no tempo 330.0
+#########################################################################
+
+
+No tempo 330.0: TESTE: o processo 4 testou o processo 5 que está correto.
+No tempo 330.0: AGENDAMENTO: foi agendado um teste para o processo 4 no tempo 360.0
+	O vetor State do processo 4 é: [ 0 1 2 0 0 0 ]
+
+
+No tempo 330.0: TESTE: o processo 5 testou o processo 0 que está correto.
+No tempo 330.0: AGENDAMENTO: foi agendado um teste para o processo 5 no tempo 360.0
+	O vetor State do processo 5 é: [ 0 1 2 0 0 0 ]
+
+
+No tempo 331.0: FALHA: o processo 4 falhou
+
+
+No tempo 331.0: TESTE: o processo 2 testou o processo 3 que está correto.
+No tempo 331.0: AGENDAMENTO: foi agendado um teste para o processo 2 no tempo 361.0
+	O vetor State do processo 2 é: [ 0 1 0 0 0 0 ]
+
+
+No tempo 360.0: TESTE: o processo 0 testou o processo 1 que está falho.
+No tempo 360.0: TESTE: o processo 0 testou o processo 2 que está correto.
+No tempo 360.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 390.0
+	O vetor State do processo 0 é: [ 0 1 2 0 0 0 ]
+
+
+No tempo 360.0: TESTE: o processo 3 testou o processo 4 que está falho.
+No tempo 360.0: TESTE: o processo 3 testou o processo 5 que está correto.
+No tempo 360.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 390.0
+	O vetor State do processo 3 é: [ 0 1 2 0 1 0 ]
+
+
+No tempo 360.0: TESTE: o processo 4 está falho e portanto, não faz nada
+
+
+No tempo 360.0: TESTE: o processo 5 testou o processo 0 que está correto.
+No tempo 360.0: AGENDAMENTO: foi agendado um teste para o processo 5 no tempo 390.0
+	O vetor State do processo 5 é: [ 0 1 2 0 0 0 ]
+
+
+No tempo 361.0: TESTE: o processo 2 testou o processo 3 que está correto.
+	O processo 2 aprendeu com o processo 3 que o estado do processo 4 é 1
+No tempo 361.0: AGENDAMENTO: foi agendado um teste para o processo 2 no tempo 391.0
+	O vetor State do processo 2 é: [ 0 1 0 0 1 0 ]
+
+
+No tempo 390.0: TESTE: o processo 0 testou o processo 1 que está falho.
+No tempo 390.0: TESTE: o processo 0 testou o processo 2 que está correto.
+	O processo 0 aprendeu com o processo 2 que o estado do processo 4 é 1
+No tempo 390.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 420.0
+	O vetor State do processo 0 é: [ 0 1 2 0 1 0 ]
+
+
+No tempo 390.0: TESTE: o processo 3 testou o processo 4 que está falho.
+No tempo 390.0: TESTE: o processo 3 testou o processo 5 que está correto.
+No tempo 390.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 420.0
+	O vetor State do processo 3 é: [ 0 1 2 0 1 0 ]
+
+
+No tempo 390.0: TESTE: o processo 5 testou o processo 0 que está correto.
+	O processo 5 aprendeu com o processo 0 que o estado do processo 4 é 1
+No tempo 390.0: AGENDAMENTO: foi agendado um teste para o processo 5 no tempo 420.0
+	O vetor State do processo 5 é: [ 0 1 2 0 1 0 ]
+
+####################################################################
+ A falha no processo 4 foi detectada por todos os outros processos 
+ após 12 testes ou 2 rodadas (59.0 unidades de tempo), no tempo 390.0
+####################################################################
+
+
+No tempo 391.0: RECUPERACAO: o processo 4 recuperou
+No tempo 391.0: AGENDAMENTO: foi agendado um teste para o processo 4 no tempo 421.0
+
+
+No tempo 391.0: TESTE: o processo 2 testou o processo 3 que está correto.
+No tempo 391.0: AGENDAMENTO: foi agendado um teste para o processo 2 no tempo 421.0
+	O vetor State do processo 2 é: [ 0 1 0 0 1 0 ]
+
+
+No tempo 420.0: TESTE: o processo 0 testou o processo 1 que está falho.
+No tempo 420.0: TESTE: o processo 0 testou o processo 2 que está correto.
+No tempo 420.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 450.0
+	O vetor State do processo 0 é: [ 0 1 2 0 1 0 ]
+
+
+No tempo 420.0: TESTE: o processo 3 testou o processo 4 que está correto.
+No tempo 420.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 450.0
+	O vetor State do processo 3 é: [ 0 1 2 0 2 0 ]
+
+
+No tempo 420.0: TESTE: o processo 5 testou o processo 0 que está correto.
+No tempo 420.0: AGENDAMENTO: foi agendado um teste para o processo 5 no tempo 450.0
+	O vetor State do processo 5 é: [ 0 1 2 0 1 0 ]
+
+
+No tempo 421.0: TESTE: o processo 4 testou o processo 5 que está correto.
+	O processo 4 aprendeu com o processo 5 que o estado do processo 0 é 0
+	O processo 4 aprendeu com o processo 5 que o estado do processo 1 é 1
+	O processo 4 aprendeu com o processo 5 que o estado do processo 2 é 2
+	O processo 4 aprendeu com o processo 5 que o estado do processo 3 é 0
+No tempo 421.0: AGENDAMENTO: foi agendado um teste para o processo 4 no tempo 451.0
+	O vetor State do processo 4 é: [ 0 1 2 0 0 0 ]
+
+
+No tempo 421.0: TESTE: o processo 2 testou o processo 3 que está correto.
+	O processo 2 aprendeu com o processo 3 que o estado do processo 4 é 2
+No tempo 421.0: AGENDAMENTO: foi agendado um teste para o processo 2 no tempo 451.0
+	O vetor State do processo 2 é: [ 0 1 0 0 2 0 ]
+
+
+No tempo 450.0: TESTE: o processo 0 testou o processo 1 que está falho.
+No tempo 450.0: TESTE: o processo 0 testou o processo 2 que está correto.
+	O processo 0 aprendeu com o processo 2 que o estado do processo 4 é 2
+No tempo 450.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 480.0
+	O vetor State do processo 0 é: [ 0 1 2 0 2 0 ]
+
+
+No tempo 450.0: TESTE: o processo 3 testou o processo 4 que está correto.
+No tempo 450.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 480.0
+	O vetor State do processo 3 é: [ 0 1 2 0 2 0 ]
+
+
+No tempo 450.0: TESTE: o processo 5 testou o processo 0 que está correto.
+	O processo 5 aprendeu com o processo 0 que o estado do processo 4 é 2
+No tempo 450.0: AGENDAMENTO: foi agendado um teste para o processo 5 no tempo 480.0
+	O vetor State do processo 5 é: [ 0 1 2 0 2 0 ]
+
+#########################################################################
+ A recuperação no processo 4 foi detectada por todos os outros processos 
+ após 11 testes ou 2 rodadas (59.0 unidades de tempo), no tempo 450.0
+#########################################################################
+
+
+No tempo 451.0: RECUPERACAO: o processo 1 recuperou
+No tempo 451.0: AGENDAMENTO: foi agendado um teste para o processo 1 no tempo 481.0
+
+
+No tempo 451.0: TESTE: o processo 4 testou o processo 5 que está correto.
+No tempo 451.0: AGENDAMENTO: foi agendado um teste para o processo 4 no tempo 481.0
+	O vetor State do processo 4 é: [ 0 1 2 0 0 0 ]
+
+
+No tempo 451.0: TESTE: o processo 2 testou o processo 3 que está correto.
+No tempo 451.0: AGENDAMENTO: foi agendado um teste para o processo 2 no tempo 481.0
+	O vetor State do processo 2 é: [ 0 1 0 0 2 0 ]
+
+
+No tempo 480.0: TESTE: o processo 0 testou o processo 1 que está correto.
+No tempo 480.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 510.0
+	O vetor State do processo 0 é: [ 0 2 2 0 2 0 ]
+
+
+No tempo 480.0: TESTE: o processo 3 testou o processo 4 que está correto.
+No tempo 480.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 510.0
+	O vetor State do processo 3 é: [ 0 1 2 0 2 0 ]
+
+
+No tempo 480.0: TESTE: o processo 5 testou o processo 0 que está correto.
+	O processo 5 aprendeu com o processo 0 que o estado do processo 1 é 2
+No tempo 480.0: AGENDAMENTO: foi agendado um teste para o processo 5 no tempo 510.0
+	O vetor State do processo 5 é: [ 0 2 2 0 2 0 ]
+
+
+No tempo 481.0: TESTE: o processo 1 testou o processo 2 que está correto.
+	O processo 1 aprendeu com o processo 2 que o estado do processo 3 é 0
+	O processo 1 aprendeu com o processo 2 que o estado do processo 4 é 2
+	O processo 1 aprendeu com o processo 2 que o estado do processo 5 é 0
+	O processo 1 aprendeu com o processo 2 que o estado do processo 0 é 0
+No tempo 481.0: AGENDAMENTO: foi agendado um teste para o processo 1 no tempo 511.0
+	O vetor State do processo 1 é: [ 0 0 0 0 2 0 ]
+
+
+No tempo 481.0: TESTE: o processo 4 testou o processo 5 que está correto.
+	O processo 4 aprendeu com o processo 5 que o estado do processo 1 é 2
+No tempo 481.0: AGENDAMENTO: foi agendado um teste para o processo 4 no tempo 511.0
+	O vetor State do processo 4 é: [ 0 2 2 0 0 0 ]
+
+
+No tempo 481.0: TESTE: o processo 2 testou o processo 3 que está correto.
+No tempo 481.0: AGENDAMENTO: foi agendado um teste para o processo 2 no tempo 511.0
+	O vetor State do processo 2 é: [ 0 1 0 0 2 0 ]
+
+
+No tempo 510.0: TESTE: o processo 0 testou o processo 1 que está correto.
+No tempo 510.0: AGENDAMENTO: foi agendado um teste para o processo 0 no tempo 540.0
+	O vetor State do processo 0 é: [ 0 2 2 0 2 0 ]
+
+
+No tempo 510.0: TESTE: o processo 3 testou o processo 4 que está correto.
+	O processo 3 aprendeu com o processo 4 que o estado do processo 1 é 2
+No tempo 510.0: AGENDAMENTO: foi agendado um teste para o processo 3 no tempo 540.0
+	O vetor State do processo 3 é: [ 0 2 2 0 2 0 ]
+
+
+No tempo 510.0: TESTE: o processo 5 testou o processo 0 que está correto.
+No tempo 510.0: AGENDAMENTO: foi agendado um teste para o processo 5 no tempo 540.0
+	O vetor State do processo 5 é: [ 0 2 2 0 2 0 ]
+
+
+No tempo 511.0: TESTE: o processo 1 testou o processo 2 que está correto.
+No tempo 511.0: AGENDAMENTO: foi agendado um teste para o processo 1 no tempo 541.0
+	O vetor State do processo 1 é: [ 0 0 0 0 2 0 ]
+
+
+No tempo 511.0: TESTE: o processo 4 testou o processo 5 que está correto.
+No tempo 511.0: AGENDAMENTO: foi agendado um teste para o processo 4 no tempo 541.0
+	O vetor State do processo 4 é: [ 0 2 2 0 0 0 ]
+
+
+No tempo 511.0: TESTE: o processo 2 testou o processo 3 que está correto.
+	O processo 2 aprendeu com o processo 3 que o estado do processo 1 é 2
+No tempo 511.0: AGENDAMENTO: foi agendado um teste para o processo 2 no tempo 541.0
+	O vetor State do processo 2 é: [ 0 2 0 0 2 0 ]
+
+#########################################################################
+ A recuperação no processo 1 foi detectada por todos os outros processos 
+ após 14 testes ou 3 rodadas (60.0 unidades de tempo), no tempo 511.0
+#########################################################################
+
+Simulação finalizada
