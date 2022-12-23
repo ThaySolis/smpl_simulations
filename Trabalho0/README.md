@@ -42,6 +42,7 @@
 Nesta tarefa cada processo correto testa o seguinte no anel. Como exemplo de funcionamento, considera-se 4 processos numerados de 0 a 3 (Figura 1 (a)). É importante observar que nessa etapa, se um processo estiver falho (Figura 1 (b)) ele não testa o próximo, então pode ser que em alguns momentos não se forme um anel.
 
 ![](Tarefa1.svg)
+
 Figura 1 - Exemplo para tarefa 1
 
 ### No código:
@@ -64,6 +65,7 @@ Figura 1 - Exemplo para tarefa 1
 Nesta tarefa, cada processo correto executa testes até achar outro processo correto. Como exemplo de funcionamento, considera-se 4 processos numerados de 0 a 3, com o processo 1 falho no momento do início da execução (Figura 2 (a)). O processo 0 testa o processo 1 e detecta que o mesmo está falho (b). Em seguida, o processo 0 testa o processo 2 e detecta que ele está correto (c). Neste momento o processo 0 para os testes, pois encontrou o processo 2 correto. O processo 2 testa o processo 3 e detecta que ele está correto (d), então para os testes. Por fim, o processo 3 testa o processo 0, que está correto e o anel se forma. O algoritmo continua até atingir o tempo limite, sendo possível que o anel se modifique caso algum processo falhe ou se recupere.
 
 ![](Tarefa2.svg)
+
 Figura 2 - Exemplo de passos para tarefa 2
 
 ### No código:
@@ -83,6 +85,7 @@ Figura 2 - Exemplo de passos para tarefa 2
 * Em (f), o processo 3 testa o próximo, que é o processo 0. O vetor State do processo 3 é atualizado para \[0, -1, -1, 0\] pois o processo 3 testou o processo 0 correto (primeiro 0), não conhece o estado dos processos 1 e 2 (os valores -1) e tem seu próprio estado como correto(o último 0). O algoritmo continua até atingir o tempo limite, sendo possível que o anel se modifique caso algum processo falhe ou se recupere.
 
 ![](Tarefa3.svg)
+
 Figura 3 - Exemplo de passos para tarefa 3
 
 ### No código:
@@ -112,6 +115,7 @@ Figura 3 - Exemplo de passos para tarefa 3
 * Em (f), o processo 2 testa o 3 correto, e dessa forma atualiza seu vetor para S=\[0,1,0,0\] com a informação que ainda não tinha sobre o processo 1 (falho), obtida do vetor de estados do processo testado 3 S=\[0, 1, 0, 0\]. É interessante notar que chegou-se a um ponto em que todos os vetores de estados dos processo são iguais (f) e até que algum processo falhe ou se recupere os vetores permacenecerão dessa forma.
 
 ![](Tarefa4.svg)
+
 Figura 4 - Exemplo de passos para tarefa 4
 
 **No código:**

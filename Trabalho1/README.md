@@ -80,6 +80,7 @@ Considere a Figura 1:
 Na Figura 1, ocorre uma rodada de testes, pois cada processo correto testou outro processo correto.
 
 ![](Figura1.svg)
+
 Figura 1 - Primeira rodada
 
 Considere agora a Figura 2:
@@ -96,6 +97,7 @@ Considere agora a Figura 2:
 Na Figura 2 houve o diagnóstico do evento de falha (valor ímpar) para o processo 1 pois todos os processos corretos tem a informação de falha do processo 1 em seus vetores `State`.
 
 ![](Figura2.svg)
+
 Figura 2 - Diagnóstico da falha no processo 1
 
 Considere agora a Figura 3:
@@ -110,6 +112,7 @@ Na Figura 3 houve o diagnóstico do evento de falha no processo 2 pois todos os 
 
 
 ![](Figura3.svg)
+
 Figura 3 - Diagnóstico da falha no processo 2
 
 Considere agora a Figura 4:
@@ -122,6 +125,7 @@ Considere agora a Figura 4:
 Na Figura 4 houve o diagnóstico do evento de falha no processo 3 pois todos os processos corretos tem a informação de falha (valor ímpar) para o processo 3 em seus vetores `State`. Neste caso, o processo 0 é o único correto.
 
 ![](Figura4.svg)
+
 Figura 4 - Diagnóstico da falha no processo 3
 
 Considere agora a Figura 5:
@@ -135,6 +139,7 @@ Considere agora a Figura 5:
 Na Figura 5 houve o diagnóstico do evento de recuperação no processo 1 pois todos os processos corretos tem a informação de recuperação (valor par) para o processo 1 em seus vetores `State`.
 
 ![](Figura5.svg)
+
 Figura 5 - Diagnóstico da recuperação para o processo 1
 
 Considere agora a Figura 6:
@@ -149,6 +154,7 @@ Considere agora a Figura 6:
 Na Figura 6 houve o diagnóstico do evento de recuperação no processo 2 pois todos os processos corretos tem a informação de recuperação (valor par) para o processo 2 em seus vetores `State`.
 
 ![](Figura6.svg)
+
 Figura 6 - Diagnóstico da recuperação para o processo 2
 
 Considere agora a Figura 7:
@@ -167,6 +173,7 @@ Considere agora a Figura 7:
 Na Figura 7 houve o diagnóstico do evento de recuperação no processo 3 pois todos os processos corretos tem a informação de recuperação (valor par) para o processo 3 em seus vetores `State`.
 
 ![](Figura7.svg)
+
 Figura 7 - Diagnóstico da recuperação para o processo 3
 
 ## Implementação

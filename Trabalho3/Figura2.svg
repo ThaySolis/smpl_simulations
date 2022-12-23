@@ -38,7 +38,7 @@
  </defs>
  <g visibility="visible" id="Slide_1">
   <g id="Drawing_1">
-   <path fill="rgb(255,255,255)" stroke="none" d="M 10362,3701 L 13150,3701 13150,4655 10362,4655 10362,3701 Z"/>
+   <rect fill="none" stroke="none" x="10362" y="3701" width="2789" height="955"/>
    <path fill="rgb(102,153,204)" stroke="none" d="M 13150,3701 L 17479,3701 17479,4655 13150,4655 13150,3701 Z"/>
    <path fill="rgb(102,153,204)" stroke="none" d="M 17479,3701 L 21754,3701 21754,4655 17479,4655 17479,3701 Z"/>
    <path fill="rgb(102,153,204)" stroke="none" d="M 21754,3701 L 26050,3701 26050,4655 21754,4655 21754,3701 Z"/>

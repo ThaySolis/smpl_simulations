@@ -68,16 +68,19 @@
 Para facilitar a compreensão, as figuras abaixo ilustram o funcionamento do VCube V1. No VCube os testes são feitos de acordo com os clusters em que os processos são organizados. No exemplo a seguir, com 8 processos, a primeira rodada de testes compreende 2 processos fazendo testes mutuamente, conforme a Figura 1, onde as setas representam os testes.
 
 ![](Figura1.svg)
+
 Figura 1 - Primeira rodada
 
 Em seguida, será executada a segunda rodada de testes onde cada processo testará os outros dentro do cluster até encontrar um correto. Encontrando um processo correto, o testador obtém informação (a partir do processo testado) sobre os demais **dentro do cluster** (informações conhecidas à partir do teste anterior). A Figura 2 ilustra essa etapa (a área azul representa informações que podem ser obtidas a partir de cada processo correto, por exemplo: quando o processo 0 testa o 2, é possível obter informação sobre o 3).
 
 ![](Figura2.svg)
+
 Figura 2 - Segunda rodada
 
 Para 8 processos temos ainda o terceiro cluster que proporcionará uma terceira rodada de testes. O funcionamento é análogo ao da rodada anterior. Cada processo testa os processos dentro do cluster até encontrar um correto e a partir dele obtém informações sobre os outros processos dentro do cluster.
 
 ![](Figura3.svg)
+
 Figura 3 - Terceira rodada
 
 A cada teste, o vetor `STATE[]` de cada processo é atualizado identificando o processo testado como falho ou correto. Ao encontrar um processo correto, se este tiver informações mais recentes sobre os demais processos dentro do cluster em questão, o processo testador obtém essas informações e atualiza também seu vetor State com elas.
@@ -163,6 +166,7 @@ A cada teste, o vetor `STATE[]` de cada processo é atualizado identificando o p
 O VCube V2 parte da função `C(i,s)` que apresenta o s-ésimo cluster no processo i, ou seja retorna a lista de processos (em ordem) que devem ser testados pelo testador i nos clusters `s=1, 2, …, logN`. A Figura 4 apresenta a tabela `C(i,s)` para 8 processos.
 
 ![](Figura4.svg)
+
 Figura 4 - Tabela com os resultados de `C(i,s)` para 8 processos
 
 A partir dos dados de `C(i,s)` são definidos os testadores de cada processo com a função. Cada processo tem 1 testador por cluster: o primeiro processo correto da `C(i,s)`.
