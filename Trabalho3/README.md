@@ -151,15 +151,18 @@ Tempo de falha aleatório: [Entrada 7.3](entrada7-3.txt) | [Saída 7.3](saida7-3
 
 Da mesma forma que o VCube, o BEBCast também utiliza o conceito de clusters para organizar as comunicações entre os processos. Na Figura 1, é exibido um exemplo, com 8 processos, onde são marcados os clusters 1, 2 e 3 do processo 0.  
 
-![Figura 1 - Os três clusters do processo 0](Figura1.svg)  
+![](Figura1.svg)  
+Figura 1 - Os três clusters do processo 0
 
 Vamos considerar que seja o processo 0 quem inicia o BEBCast. Primeiramente ele faz o deliver da mensagem. Ele irá mandar mensagens apenas para o primeiro processo correto de cada um de seus clusters. Para isso existe uma função chamada `FFneighbor(i, s)`, que retorna o primeiro processo correto do cluster `s` do processo `i`. No caso de 8 processos corretos, seus resultados seriam os seguintes:  
 
-![Figura 2 - Resultados da função FFneighbor para um conjunto de 8 processos onde todos estão corretos](Figura2.svg)  
+![](Figura2.svg)  
+Figura 2 - Resultados da função FFneighbor para um conjunto de 8 processos onde todos estão corretos
 
 Após mandar as mensagens, o processo origem adiciona os números dos processos que a receberam em uma lista que ACKs pendentes, os quais ele irá aguardar. Ao receber uma mensagem, o processo destinatário faz o deliver da mensagem, determina o cluster a que pertence em relação ao processo de origem da mensagem e guarda o número do processo de origem da mensagem (para responder com ACK posteriormente). Para fazer a determinação do cluster, utiliza-se a função `Cluster(i, j)` que retorna a qual cluster de `j`, o processo `i` pertence. A Figura 3 mostra os resultados dessa função para todos os processos.
 
-![Figura 3 - Resultados da função Cluster(i, j) para 8 processos](Figura3.svg)  
+![](Figura3.svg)  
+Figura 3 - Resultados da função Cluster(i, j) para 8 processos
 
 Em seguida, para cada cluster seu, cujo número seja menor que o cluster de origem - 1, ele irá enviar a mensagem para o primeiro processo correto, quando houver, (utilizando a função `FFneighbor`) e adicioná-lo em sua própria lista de ACKs pendentes.  
   
@@ -171,7 +174,8 @@ Quando a lista de ACKs pendentes do processo de origem esvazia, é porque o broa
   
 Um exemplo de uma execução completa pode ser visto na Figura 4. O processo 0 encaminha mensagens ao primeiro processo correto de seus três custers: 1 (em magenta), 2 (em verde) e 4 (em azul) e fica aguardando ACKs desses processos. O processo 2, por pertencer ao cluster 2 do processo 1, tem que encaminhar a mensagem ao primeiro processo correto de seu cluster 1 (todos os clusters com valor inferior ao do processo de origem -1), sendo assim, ele encaminha a mensagem para o processo 3 (também em verde) e aguarda seu ACK. O processo 3 pertence ao cluster 1 do processo 2, e dessa forma não precisa encaminhar a mensagem a mais nenhum processo, pois pertence ao cluster 1 do processo de origem, então, já pode responder com ACK ao processo 2. Este, tendo recebido ACK de 3 e estando agora com sua lista de ACKs pendentes vazia, pode encaminhar um ACK ao processo 0, de quem recebeu a mensagem. O processo 0 remove o processo 2 da lista de ACKs pendentes. O processo 4 recebe a mensagem (em azul) e faz parte do cluster 3 do processo 0, por isso ele deve encaminhar a mensagem ao primeiro processo correto do seu cluster de número 2 (processo 6) e número 1 (processo 5) e aguardar os respectivos ACKs. O processo 5 faz parte do cluster 1 do processo 4 e portanto não precisa encaminhar a mensagem, apenas responder com ACK. O processo 4 pode remover o processo 5 da lista de ACKs pendentes. O processo 6, por sua vez, precisa encaminhar ao seu primeiro processo correto do cluster de número 1, que é o 7 (em laranja) e esperar pelo ACK correspondente. O processo 7 recebe a mensagem e como não tem para quem encaminhar, manda o ACK ao processo 6. Este, recebe o ACK, remove o processo 7 da lista de ACKs pendentes e, estando com sua lista de ACKs pendentes vazia, manda um ACK ao processo 4. Este remove o processo 6 da lista de ACKs pendentes e tendo ela esvaziado, o processo 4 pode enviar um ACK ao processo 0. O processo 0, neste ponto já recebeu todos os ACKs necessários, então ele esvazia sua lista de ACKs pendentes e termina o BEBCast.  
 
-![Figura 4 - Exemplo de execução de BEBCast](Figura4.svg)  
+![](Figura4.svg)  
+Figura 4 - Exemplo de execução de BEBCast
 
 Em caso de falha em algum processo, se a lista de ACKS pendentes do processo atual contiver o processo que falhou, ele é removido e quando possível, o processo atual reenvia a mensagem para outro processo correto no mesmo cluster do processo que falhou. Através da função `FFneighbor` é encontrado o novo primeiro processo correto no cluster, enviada uma mensagem a ele e adicionado seu número à lista de ACKs pendentes do processo atual. O algoritmo segue a partir do novo processo que recebeu a mensagem ou, se ele não existir, o processo atual manda um ACK ao processo de quem recebem a mensagem.  
 Como para esta simulação é executado apenas um fluxo de broadcast por vez, não é necessário criar uma lista de mensagens entregues (delivered), apenas ter controle se a mensagem já foi entregue ou não.
